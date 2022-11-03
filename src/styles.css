@@ -1,0 +1,23 @@
+.main-container {
+    display: flexbox;
+    border: solid black; 
+    height: 500px;
+}
+
+.task-container {
+    flex-flow: column;
+}
+
+.add-button {
+        display: inline-block;
+        background: rgb(1, 90, 8);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: inherit;
+}
