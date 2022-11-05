@@ -1,15 +1,12 @@
 import React from "react";
-import Header from "./components/Header";
+import { useState } from "react";
 import TaskContainer from "./components/TaskContainer";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
+import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
+  const [tasks, setTasks] = useState([]);
   return (
     <div className="main-container">
-      <Header />
-      <TaskContainer className='task-container'/>
+      <TaskContainer className="task-container" setTasks={setTasks} tasks={tasks}/>
     </div>
   );
 }

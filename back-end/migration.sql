@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS task_table;
+DROP TABLE IF EXISTS tasks;
 
 CREATE TABLE IF NOT EXISTS tasks (
     task_id SERIAL PRIMARY KEY,
@@ -7,6 +7,6 @@ CREATE TABLE IF NOT EXISTS tasks (
 );
  
  INSERT INTO tasks (task,task_time) VALUES 
- ('doctors appointment','Feb 15 2pm '),
- ('car maintence','Apr 7 4pm'),
- ('haircut','Feb 31 1am');
+ ('doctors appointment','Feb 15 2:00pm '),
+ ('Car maintenance','Apr 7 4:00pm'),
+ ('Haircut','Feb 31 1:00am');

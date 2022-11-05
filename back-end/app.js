@@ -30,7 +30,7 @@ app
           console.log(err);
         } else {
           console.log(result.rows);
-          res.status(201).send(result.rows[0]);
+          res.status(201).send(result.rows);
         }
       }
     );

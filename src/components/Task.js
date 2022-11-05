@@ -1,18 +1,21 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import DeleteButton from "./DeleteButton";
-const Task = () => {
-  const [tasks, setTasks] = useState([]);
+const Task = (props) => {
+  
   useEffect(() => {
     const url = "http://localhost:3001/";
     fetch(url)
       .then((res) => res.json())
-      .then((data) => setTasks(data));
+      .then((data) => props.setTasks(data));
   }, []);
-  return tasks.map((task) => {
-    console.log(task);
+
+  return props.tasks.map((task) => {
     return (
-      <div className="task-cards">
-        <h3> {task.task} <DeleteButton/></h3>
+      <div className="task-cards" keys={task.task_id}>
+        <h3>
+          {task.task} 
+        </h3>
+          <DeleteButton delete={task} setTasks={props.setTasks} />
         <p>{task.task_time}</p>
       </div>
     );
