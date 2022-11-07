@@ -6,7 +6,11 @@ function App() {
   const [tasks, setTasks] = useState([]);
   return (
     <div className="main-container">
-      <TaskContainer className="task-container" setTasks={setTasks} tasks={tasks}/>
+      <TaskContainer
+        className="task-container"
+        setTasks={setTasks}
+        tasks={tasks}
+      />
     </div>
   );
 }

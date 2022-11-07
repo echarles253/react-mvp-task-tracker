@@ -1,37 +1,36 @@
-body{
-    background: linear-gradient(to right,#606060,#042dd0);
-    font-variant: petite-caps;
-    font-family: monospace;
+body {
+  background: linear-gradient(to right, #606060, #042dd0);
+  font-variant: petite-caps;
+  font-family: monospace;
 }
 #root {
-    /* //text-align: center;  */
-    display: flex;
-    margin: auto;
-    /* height: 200px; */
-    padding-top: 200px;
-    padding-left: 100px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
+  /* //text-align: center;  */
+  display: flex;
+  margin: auto;
+  /* height: 200px; */
+  padding-top: 200px;
+  padding-left: 100px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
-.main-container  {
-    display: flex;
-    border: solid rgba(33, 70, 130, 0.469);
-    height: 500px;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: stretch;
-    background-color: rgba(169, 169, 169, 0.341);
-    justify-content: unset;
-    width: 500px;
-    overflow-x: hidden;
-    overflow-y: scroll;
+.main-container {
+  display: flex;
+  border: solid rgba(33, 70, 130, 0.469);
+  height: 500px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: stretch;
+  background-color: rgba(169, 169, 169, 0.341);
+  justify-content: unset;
+  width: 500px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .main-container::-webkit-scrollbar {
-    display: none;
-    
+  display: none;
 }
 
 .task-container {
@@ -57,46 +56,62 @@ body{
   width: 100px;
   border: 1px solid white;
   outline: none;
-
 }
 .add-button:hover,
 .add-button:focus {
-    background-color: rgba(0, 212, 25, 0.543);
+  background-color: rgba(0, 212, 25, 0.543);
 }
 .delete {
-    color: red;
-    font-size: inherit;
-    height: 0.9em;
-    cursor: pointer;
-    margin-left: 405px;
-    margin-top: -20px;
+  color: red;
+  font-size: inherit;
+  height: 0.9em;
+  cursor: pointer;
+  margin-left: 405px;
+  margin-top: -20px;
 }
 .delete:hover,
-.delete:focus{
-    background-color: rgba(236, 8, 0, 0.718)
+.delete:focus {
+  background-color: rgba(236, 8, 0, 0.718);
 }
-.add-task{
-    background:  rgb(0, 141, 12);
+.add-task {
+  background: rgb(0, 141, 12);
 }
 .add-task:hover,
-.add-task:focus{
-    
-    background-color: rgba(0, 212, 25, 0.543)
+.add-task:focus {
+  background-color: rgba(0, 212, 25, 0.543);
 }
 
 .task-cards {
-    outline-style: double;
-    padding-left: 35px;
-    color: rgb(0, 0, 0);
-    background-color: #fffcfc2e;
+  outline-style: double;
+  padding-left: 35px;
+  color: rgb(0, 0, 0);
+  background-color: #fffcfc2e;
 }
 
 p {
-    margin-top: -15px;
-    margin-bottom: 0rem;
-    position: relative;
-    top: 0;
+  margin-top: -15px;
+  margin-bottom: 0rem;
+  position: relative;
+  top: 0;
 }
-h1{
-     color: rgb(0, 0, 0);
+h1 {
+  color: rgb(0, 0, 0);
+}
+
+.modal-body {
+  text-align: center;
+  
+    background-color: rgba(96, 150, 225, 0.341);
+}
+
+.modal-header {
+    background-color:  rgba(81, 81, 81, 0.341);
+}
+/* Modal.Footer */
+.modal-footer {
+    background-color:  rgba(96, 150, 225, 0.341);
+}
+
+.task-description {
+    width: 20vw;
 }

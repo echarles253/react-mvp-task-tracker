@@ -2,7 +2,8 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const DeleteButton = (props) => {
   return (
-    <AiOutlineClose className="delete"
+    <AiOutlineClose
+      className="delete"
       onClick={() => {
         //let currentTask = e.target
         // console.log(props.delete)

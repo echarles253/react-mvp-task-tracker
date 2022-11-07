@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { propTypes } from "react-bootstrap/esm/Image";
+
 import Modal from "react-bootstrap/Modal";
 
 const AddButton = (props) => {
   const [show, setShow] = useState(false);
   const [taskDescription, SetTaskDescription] = useState("");
   const [taskTime, SetTaskTime] = useState("");
-  
 
   function onSubmit(e) {
     e.preventDefault();
@@ -18,15 +17,14 @@ const AddButton = (props) => {
       <button className="add-button" onClick={() => setShow(!show)}>
         Add
       </button>
-      <Modal show={show} onHide={handleClose} 
-      
-      >
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton className="close-form">
           <Modal.Title>Add a Task</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form onSubmit={onSubmit}>
             <input
+            className="task-description"
               type="text"
               placeholder="Task description"
               onChange={(e) => {
@@ -37,21 +35,23 @@ const AddButton = (props) => {
             <br></br>
             <br></br>
             <input
-              type="text"
+            className="task-description"
+              type="datetime-local"
               placeholder="Task date and time"
               onChange={(e) => {
-                SetTaskTime(e.target.value);
-                //console.log(taskTime)
+                SetTaskTime(e.target.value.replace("T", " @"));
+                console.log(taskTime);
               }}
             ></input>
             <br></br>
             <br></br>
-            <button className="add-task"
+            <button
+              className="add-task"
               onClick={() => {
                 const taskObj = {
                   task: taskDescription,
                   task_time: taskTime,
-                }
+                };
                 fetch("http://localhost:3001/", {
                   method: "POST",
                   mode: "cors",
@@ -63,12 +63,10 @@ const AddButton = (props) => {
                   .then((result) => result.json())
                   .then((data) => {
                     props.setTasks((tasks) => {
-                      return [...tasks,data[0]]
-                    })
+                      return [...tasks, data[0]];
+                    });
                   })
-                  .then(handleClose)
-                 
-                  
+                  .then(handleClose);
               }}
             >
               Add a Task
